@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Training Center Americas - Módulo Corporativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .course-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .slide-container {
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides-wrapper {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides-carousel {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-item {
+            width: 100%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SLIDE 1: Portada */
+        .slide-1 {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 100%), 
+                        url('assets/images/building-bg.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        .slide-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .slide-1-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 2;
+        }
+
+        .slide-1-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+            max-width: 50%;
+            line-height: 1.1;
+        }
+
+        .slide-1-logos {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-gtc {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #00BFFF, #0066CC);
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-nissan-pw {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 9px;
+            line-height: 1.2;
+            padding: 8px;
+        }
+
+        .logo-nissan-pw img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-universidad {
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #0066CC;
+            font-size: 10px;
+        }
+
+        .logo-universidad-text {
+            font-weight: bold;
+            color: #0066CC;
+            font-size: 11px;
+        }
+
+        .logo-universidad-nissan {
+            font-weight: bold;
+            color: #CC0000;
+            font-size: 12px;
+        }
+
+        /* SLIDE 2: Misión, Visión, Objetivo */
+        .slide-2 {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%),
+                        url('assets/images/slide-2-bg.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .slide-2-header {
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .slide-2-header-logo {
+            display: none;
+        }
+
+        .slide-2-header-text {
+            display: none;
+        }
+
+        .slide-2-logo-npm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+        }
+
+        .slide-2-logo-npm img {
+            height: 70px;
+            object-fit: contain;
+            width: auto;
+        }
+
+        .slide-2-npm-text {
+            text-align: right;
+            font-size: 11px;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .slide-2-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            z-index: 2;
+            padding: 60px;
+            justify-content: center;
+        }
+
+        .slide-2-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .slide-2-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #8B3A3A;
+            letter-spacing: 0.5px;
+        }
+
+        .slide-2-text {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .slide-2-text strong {
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Responsive slide 2 */
+        @media (max-width: 768px) {
+            .slide-2-header {
+                padding: 0 20px;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .slide-2-content {
+                left: 20px;
+                right: 20px;
+                top: 120px;
+                gap: 25px;
+            }
+
+            .slide-2-title {
+                font-size: 22px;
+            }
+
+            .slide-2-text {
+                font-size: 13px;
+            }
+
+            .slide-2-npm-text {
+                font-size: 9px;
+            }
+        }
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 3;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide-1-title {
+                font-size: 2rem;
+                max-width: 80%;
+            }
+
+            .slide-1-logos {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+                font-size: 10px;
+            }
+
+            .slide-1-content {
+                padding: 40px;
+            }
+        }
+
+        /* ===== BARRA DE CONTROLES DEL CURSO ===== */
+        .course-controls {
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #e0e0e0;
+            padding: 20px 0;
+            margin-top: 0;
+        }
+
+        .controls-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .progress-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .progress-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #0066CC;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .slide-counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .counter-display {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0066CC;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            padding: 10px 24px;
+            border: 1px solid #0066CC;
+            background-color: white;
+            color: #0066CC;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background-color: #0066CC;
+            color: white;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            border-color: #ccc;
+            color: #ccc;
+        }
+
+        .nav-btn:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        /* Responsive controles */
+        @media (max-width: 768px) {
+            .controls-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .progress-section {
+                width: 100%;
+            }
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .nav-btn {
+                flex: 1;
+            }
+
+            .slide-counter {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        /* SLIDE 3: mapa interactivo */
+        .slide-3 {
+            background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 40px;
+        }
+
+        .slide-3-map-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            height: 520px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            overflow: hidden;
+            position: relative;
+            background: #0b1220; /* dark background behind the SVG */
+        }
+
+        .slide-3-map-wrapper svg {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .slide-3-text {
+            margin-top: 18px;
+            max-width: 1000px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .map-tooltip {
+            position: absolute;
+            pointer-events: none;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            z-index: 1000;
+            transform: translate(-50%, -120%);
+            white-space: nowrap;
+            display: none;
+        }
+
+        .map-marker {
+            cursor: pointer;
+            transition: transform 0.12s ease;
+        }
+
+        .map-marker:hover { transform: scale(1.2); }
+
+        /* SLIDE 4: Global Training Center Americas (replica exacta) */
+        .slide-4 {
+            background: #fff;
+            position: relative;
+            padding: 18px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .slide-4-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .slide-4-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: 0.5px;
+        }
+
+        .slide-4-npw {
+            position: absolute;
+            right: 12px;
+            top: 6px;
+            width: 110px;
+            height: auto;
+        }
+
+        .slide-4-divider {
+            width: 92%;
+            height: 8px;
+            background: linear-gradient(90deg,#8b0000,#ffbebe);
+            margin: 10px 0 18px 0;
+            border-radius: 2px;
+        }
+
+        .slide-4-body {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 120px 1fr 120px;
+            gap: 18px;
+            align-items: start;
+        }
+
+        .side-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .side-thumb {
+            width: 100px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .side-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .side-label {
+            margin-top: 6px;
+            color: #2a66b2;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .center-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .center-image {
+            width: 720px;
+            height: 320px;
+            background: #ddd url('assets/images/building-bg.jpg') center/cover no-repeat;
+            position: relative;
+            border-radius: 4px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .flag-overlay {
+            position: absolute;
+            bottom: 12px;
+            left: 22%;
+            display: flex;
+            gap: 18px;
+            z-index: 4;
+        }
+
+        .flag {
+            width: 64px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+        }
+
+        .flag img { width: 100%; height: 100%; object-fit: cover; display:block; }
+
+        .play-btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            z-index: 5;
+        }
+
+        .play-btn:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 18px solid #b30000;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+        }
+
+        .bottom-row {
+            margin-top: 12px;
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .bottom-thumb {
+            width: 110px;
+            height: 70px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.14);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bottom-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+
+        @media (max-width: 1100px) {
+            .center-image { width: 560px; height: 260px; }
+        }
+
+        @media (max-width: 820px) {
+            .slide-4-body { grid-template-columns: 80px 1fr 80px; }
+            .center-image { width: 420px; height: 220px; }
+            .slide-4-title { font-size: 26px; }
+        }
+
+        /* Improved responsiveness for slide 4 */
+        @media (max-width: 1100px) {
+            .slide-4 { padding: 14px; }
+            .slide-4-title { font-size: 30px; }
+            .center-image { width: 560px; height: 260px; }
+        }
+
+        @media (max-width: 900px) {
+            .slide-4-body { grid-template-columns: 1fr; gap: 12px; }
+            .side-stack { flex-direction: row; justify-content: center; gap: 12px; }
+            .side-stack > div { display:flex; flex-direction:column; align-items:center; }
+            .center-image { width: 100%; max-width: 760px; height: 300px; }
+            .flag-overlay { left: 12%; }
+            .side-label { font-size: 12px; }
+            .slide-4-divider { width: 96%; }
+            .slide-4-npw { position: absolute; right: 12px; top: 8px; width: 88px; }
+        }
+
+        @media (max-width: 600px) {
+            .slide-4-title { font-size: 20px; }
+            .center-image { height: 200px; }
+            .side-thumb { width: 84px; height: 66px; border-radius: 8px; }
+            .bottom-thumb { width: 84px; height: 60px; }
+            .flag { width: 48px; height: 30px; }
+            .play-btn { width:56px; height:56px; }
+            .play-btn:after { border-left: 14px solid #b30000; border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+            .slide-4-body { padding: 0 6px; }
+        }
+
+        @media (max-width: 420px) {
+            .slide-4 { padding: 8px; }
+            .center-image { height: 160px; }
+            .slide-4-title { font-size: 18px; }
+            .side-label { font-size: 11px; }
+            .bottom-row { gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-wrapper">
+        <div class="slide-container">
+            <div class="slides-wrapper">
+                <div class="slides-carousel" id="slidesCarousel">
+                    <!-- SLIDE 1: Portada -->
+                    <div class="slide-item">
+                        <div class="slide slide-1">
+                <div class="slide-1-content">
+                    <div>
+                        <h1 class="slide-1-title">Global Training Center Americas</h1>
+                    </div>
+                    <div class="slide-1-logos">
+                        <div class="logo logo-gtc">GTC</div>
+                        <div class="logo logo-nissan-pw">
+                            <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                        </div>
+                        <div class="logo logo-universidad">
+                            <div class="logo-universidad-text">UNIVERSIDAD</div>
+                            <div class="logo-universidad-nissan">NISSAN</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-reference">C02</div>
+            </div>
+                    </div>
+
+                    <!-- SLIDE 2: Misión, Visión, Objetivo -->
+                    <div class="slide-item">
+                        <div class="slide slide-2">
+                            <div class="slide-2-header">
+                                <div class="slide-2-logo-npm">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+
+                            <div class="slide-2-content">
+                                <!-- Misión -->
+                                <div class="slide-2-section">
+                                    <h2 class="slide-2-title">Misión</h2>
+                                    <p class="slide-2-text">
+                                        <strong>Impartir entrenamiento en Técnicas Básicas y Avanzadas</strong> a todo el personal de las plantas de ensamble de vehículos y motores para generar <strong>calidad de origen</strong> que satisfagan las expectativas de nuestros clientes.
+                                    </p>
+                                </div>
+
+                                <!-- Visión -->
+                                <div class="slide-2-section">
+                                    <h2 class="slide-2-title">Visión</h2>
+                                    <p class="slide-2-text">
+                                        Ser un Centro de Entrenamiento y Soporte <strong>"Benchmark"</strong> a nivel global para garantizar el respeto a los estándares y evitar las variaciones.
+                                    </p>
+                                </div>
+
+                                <!-- Objetivo -->
+                                <div class="slide-2-section">
+                                    <h2 class="slide-2-title">Objetivo</h2>
+                                    <p class="slide-2-text">
+                                        Promover el sistema de desarrollo de <strong>Master Trainers</strong> y <strong>Regional Trainers</strong> en las <strong>Técnicas Básicas y Avanzadas</strong> en todas las plantas de la <strong>Región de Américas</strong> con base a estándares Globales
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SLIDE 3: Mapa mundial interactivo -->
+                    <div class="slide-item">
+                        <div class="slide slide-3">
+                            <div class="slide-3-header">
+                                <div class="slide-3-title">Nissan Global Footprint</div>
+                            </div>
+                            <div class="slide-3-map-wrapper" id="mapWrapper">
+                                <!-- Inline SVG world map (stylized, created for this module) -->
+                                <svg id="worldMap" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <style>
+                                            .sea { fill: #081127 }
+                                            .land { fill: #dcdfe5; stroke: #c9cdd3; stroke-width:0.6 }
+                                            .marker-nissan { fill: #0a7bff; stroke: #fff; stroke-width:1 }
+                                            .marker-gtc { fill: #e04b4b; stroke: #fff; stroke-width:1 }
+                                            .graticule { stroke: rgba(255,255,255,0.03); stroke-width: 0.5 }
+                                        </style>
+                                    </defs>
+                                    <!-- sea background -->
+                                    <rect class="sea" width="1000" height="500"/>
+
+                                    <!-- viewport group (we transform this group for pan/zoom) -->
+                                    <g id="viewport">
+                                    <!-- simplified continent shapes (stylized) -->
+                                    <g id="lands">
+                                        <!-- North America -->
+                                        <path class="land" d="M60,160 C80,140 120,120 180,140 C220,150 260,140 300,150 C340,160 360,170 380,170 C400,170 420,160 460,160 C500,160 520,170 540,180 C560,190 540,220 520,230 C480,250 420,260 360,250 C320,240 280,230 240,230 C200,230 160,210 120,200 C90,190 70,180 60,160 Z"/>
+                                        <!-- South America -->
+                                        <path class="land" d="M380,260 C400,260 420,270 440,300 C460,340 460,360 450,380 C440,400 420,410 400,420 C380,430 360,430 340,420 C320,410 310,390 300,370 C290,350 300,320 320,300 C340,280 360,270 380,260 Z"/>
+                                        <!-- Europe -->
+                                        <path class="land" d="M500,80 C520,70 550,70 570,80 C590,90 600,110 610,120 C620,130 630,140 640,150 C650,160 650,170 640,180 C620,200 600,200 580,190 C560,180 540,170 520,160 C500,150 490,120 500,100 Z"/>
+                                        <!-- Africa -->
+                                        <path class="land" d="M560,180 C580,190 600,220 620,260 C640,300 640,330 620,360 C600,390 560,400 520,390 C480,380 460,350 450,320 C440,290 460,230 500,210 C530,200 550,195 560,180 Z"/>
+                                        <!-- Asia -->
+                                        <path class="land" d="M620,120 C660,110 700,110 740,120 C780,130 820,150 860,170 C880,180 890,200 880,220 C860,240 820,250 790,260 C760,270 740,280 720,280 C700,280 680,270 660,260 C640,250 620,220 620,200 C620,170 620,140 620,120 Z"/>
+                                        <!-- Australia (stylized) -->
+                                        <path class="land" d="M820,360 C840,350 880,350 900,370 C920,390 900,410 880,410 C860,410 840,400 820,380 C810,370 815,365 820,360 Z"/>
+                                    </g>
+
+                                        <!-- optional graticule (subtle) -->
+                                        <g class="graticule">
+                                        <path d="M0,50 L1000,50"/>
+                                        <path d="M0,100 L1000,100"/>
+                                        <path d="M0,150 L1000,150"/>
+                                        <path d="M0,200 L1000,200"/>
+                                        <path d="M0,250 L1000,250"/>
+                                        <path d="M0,300 L1000,300"/>
+                                        <path d="M0,350 L1000,350"/>
+                                        <path d="M0,400 L1000,400"/>
+                                        </g>
+
+                                        <!-- Markers group -->
+                                        <g id="markers"></g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <div class="slide-3-text">
+                                Nissan manufacturing plants están ubicadas en puntos estratégicos del mundo incluyendo Japón, Estados Unidos, México, Reino Unido, China, Brasil, Sudáfrica, India, Tailandia e Indonesia.
+
+                                Global Training Centers (GTC) están ubicados en Japan (Oppama), Mexico (Aguascalientes) y United Kingdom (Sunderland) funcionando como centros clave para estandarización y despliegue del conocimiento técnico.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SLIDE 4: Portada con imagen central y miniaturas -->
+                    <div class="slide-item">
+                        <div class="slide slide-4">
+                            <div class="slide-4-header">
+                                <img src="assets/images/gtc-logo.png" alt="GTC" style="position:absolute;left:12px;width:72px;">
+                                <div class="slide-4-title">Global Training Center Americas</div>
+                                <img class="slide-4-npw" src="assets/images/nissan-production-way.png" alt="NPW">
+                            </div>
+                            <div class="slide-4-divider"></div>
+
+                            <div class="slide-4-body">
+                                <div class="side-stack">
+                                    <div>
+                                        <div class="side-thumb"><img src="assets/images/press.jpg" alt="PRESS"></div>
+                                        <div class="side-label">PRESS</div>
+                                    </div>
+                                    <div>
+                                        <div class="side-thumb"><img src="assets/images/body.jpg" alt="BODY"></div>
+                                        <div class="side-label">BODY</div>
+                                    </div>
+                                    <div>
+                                        <div class="side-thumb"><img src="assets/images/paint.jpg" alt="PAINT"></div>
+                                        <div class="side-label">PAINT</div>
+                                    </div>
+                                </div>
+
+                                <div class="center-panel">
+                                    <div class="center-image">
+                                        <div class="flag-overlay">
+                                            <div class="flag"><img src="assets/images/us-flag.png" alt="US"></div>
+                                            <div class="flag"><img src="assets/images/mx-flag.png" alt="MX"></div>
+                                            <div class="flag"><img src="assets/images/br-flag.png" alt="BR"></div>
+                                        </div>
+                                        <div class="play-btn" title="Play video"></div>
+                                    </div>
+
+                                    <div class="bottom-row">
+                                        <div class="bottom-thumb"><img src="assets/images/plastics.jpg" alt="Plastics"></div>
+                                        <div class="bottom-thumb"><img src="assets/images/tch.jpg" alt="T&CH"></div>
+                                        <div class="bottom-thumb"><img src="assets/images/mh.jpg" alt="M H"></div>
+                                        <div class="bottom-thumb"><img src="assets/images/powertrain.jpg" alt="Power Train"></div>
+                                    </div>
+                                </div>
+
+                                <div class="side-stack">
+                                    <div>
+                                        <div class="side-thumb"><img src="assets/images/pqa.jpg" alt="PQA"></div>
+                                        <div class="side-label">PQA</div>
+                                    </div>
+                                    <div>
+                                        <div class="side-thumb"><img src="assets/images/bqa.jpg" alt="BQA"></div>
+                                        <div class="side-label">BQA</div>
+                                    </div>
+                                    <div>
+                                        <div class="side-thumb"><img src="assets/images/vqa.jpg" alt="VQA"></div>
+                                        <div class="side-label">VQA</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-controls">
+            <div class="controls-inner">
+                <!-- Sección de Progreso -->
+                <div class="progress-section">
+                    <div class="progress-label">Progreso del Módulo</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <!-- Contador de Slides -->
+                <div class="slide-counter">
+                    <span id="currentSlide">1</span>
+                    <span>/</span>
+                    <span id="totalSlides">1</span>
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="nav-buttons">
+                    <button class="nav-btn" id="prevBtn" onclick="previousSlide()">← Previous</button>
+                    <button class="nav-btn" id="nextBtn" onclick="nextSlide()">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== SISTEMA DE GESTIÓN DE SLIDES Y PROGRESO =====
+        
+        // Configuración del curso
+        const courseConfig = {
+            totalSlides: 2, // Se actualizará automáticamente
+            currentSlide: 1,
+            courseId: 'GTC-001', // ID único del módulo
+            userId: null, // Se obtendrá de SharePoint/contexto corporativo
+        };
+
+        // Almacenamiento de progreso (localStorage para navegadores, integrable con SharePoint)
+        const progressData = {
+            init: function() {
+                const saved = localStorage.getItem(`progress_${courseConfig.courseId}`);
+                return saved ? JSON.parse(saved) : {
+                    courseId: courseConfig.courseId,
+                    userId: courseConfig.userId,
+                    startDate: new Date().toISOString(),
+                    lastAccess: new Date().toISOString(),
+                    slides: {},
+                    completionPercentage: 0
+                };
+            },
+
+            save: function(data) {
+                localStorage.setItem(`progress_${courseConfig.courseId}`, JSON.stringify(data));
+            },
+
+            logSlideView: function(slideNumber) {
+                const data = this.init();
+                data.slides[slideNumber] = {
+                    viewed: true,
+                    timestamp: new Date().toISOString(),
+                    duration: 0 // Se puede calcular en base a tiempo
+                };
+                data.lastAccess = new Date().toISOString();
+                data.completionPercentage = Math.round((Object.keys(data.slides).length / courseConfig.totalSlides) * 100);
+                this.save(data);
+                console.log(`📊 Slide ${slideNumber} registrado | Progreso: ${data.completionPercentage}%`, data);
+            }
+        };
+
+        // Inicializar progreso
+        let progress = progressData.init();
+
+        // Función para actualizar la UI de progreso
+        function updateProgress() {
+            const percentage = (courseConfig.currentSlide / courseConfig.totalSlides) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('currentSlide').textContent = courseConfig.currentSlide;
+            document.getElementById('totalSlides').textContent = courseConfig.totalSlides;
+
+            // Deshabilitar/habilitar botones según posición
+            document.getElementById('prevBtn').disabled = courseConfig.currentSlide === 1;
+            document.getElementById('nextBtn').disabled = courseConfig.currentSlide === courseConfig.totalSlides;
+
+            // Registrar visualización del slide
+            progressData.logSlideView(courseConfig.currentSlide);
+        }
+
+        // Navegación de slides
+        function nextSlide() {
+            if (courseConfig.currentSlide < courseConfig.totalSlides) {
+                courseConfig.currentSlide++;
+                updateCarousel();
+                updateProgress();
+            }
+        }
+
+        function previousSlide() {
+            if (courseConfig.currentSlide > 1) {
+                courseConfig.currentSlide--;
+                updateCarousel();
+                updateProgress();
+            }
+        }
+
+        // Actualizar posición del carrusel
+        function updateCarousel() {
+            const carousel = document.getElementById('slidesCarousel');
+            const offset = -(courseConfig.currentSlide - 1) * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Inicialización
+        function initCourse() {
+            courseConfig.totalSlides = document.querySelectorAll('.slide').length;
+            updateProgress();
+            console.log(`✅ Módulo GTC iniciado | Total slides: ${courseConfig.totalSlides}`);
+        }
+
+        // Iniciar cuando el DOM esté listo (handled later together)
+
+        // Teclado para navegación (opcional, mejora UX)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // ===== Map interaction (Slide 3) =====
+        function initMapInteractive() {
+            const mapWrapper = document.getElementById('mapWrapper');
+            const svg = document.getElementById('worldMap');
+            const markersGroup = document.getElementById('markers');
+
+            // Tooltip element
+            const tooltip = document.createElement('div');
+            tooltip.className = 'map-tooltip';
+            mapWrapper.appendChild(tooltip);
+
+            // Markers data (latitude / longitude).
+            const markers = [
+                // Nissan Plants
+                {type: 'plant', name: 'Oppama Plant', city: 'Oppama, Japan', lat: 35.332, lon: 139.666},
+                {type: 'plant', name: 'Tochigi Plant', city: 'Tochigi, Japan', lat: 36.510, lon: 139.900},
+                {type: 'plant', name: 'Kyushu Plant', city: 'Kyushu, Japan', lat: 33.500, lon: 130.500},
+                {type: 'plant', name: 'Smyrna Plant', city: 'Smyrna, USA', lat: 35.996, lon: -86.5186},
+                {type: 'plant', name: 'Canton Plant', city: 'Canton, USA', lat: 32.6059, lon: -89.9817},
+                {type: 'plant', name: 'Decherd Plant', city: 'Decherd, USA', lat: 35.183, lon: -86.176},
+                {type: 'plant', name: 'Aguascalientes A1', city: 'Aguascalientes, Mexico', lat: 21.883, lon: -102.2826},
+                {type: 'plant', name: 'Aguascalientes A2', city: 'Aguascalientes, Mexico', lat: 21.885, lon: -102.280},
+                {type: 'plant', name: 'CIVAC (Cuernavaca)', city: 'Cuernavaca, Mexico', lat: 18.920, lon: -99.230},
+                {type: 'plant', name: 'Sunderland Plant', city: 'Sunderland, UK', lat: 54.9069, lon: -1.3838},
+                {type: 'plant', name: 'Wuhan Plant', city: 'Wuhan, China', lat: 30.5928, lon: 114.3055},
+                {type: 'plant', name: 'Guangzhou Plant', city: 'Guangzhou, China', lat: 23.1291, lon: 113.2644},
+                {type: 'plant', name: 'Xiangyang Plant', city: 'Xiangyang, China', lat: 32.0424, lon: 112.1224},
+                {type: 'plant', name: 'Resende Plant', city: 'Resende, Brazil', lat: -22.4728, lon: -44.4519},
+                {type: 'plant', name: 'Rosslyn Plant', city: 'Rosslyn, South Africa', lat: -25.7579, lon: 28.1637},
+                {type: 'plant', name: 'Chennai Plant', city: 'Chennai, India', lat: 13.0827, lon: 80.2707},
+                {type: 'plant', name: 'Samut Prakan Plant', city: 'Samut Prakan, Thailand', lat: 13.5999, lon: 100.5995},
+                {type: 'plant', name: 'Purwakarta Plant', city: 'Purwakarta, Indonesia', lat: -6.5544, lon: 107.445},
+                // GTCs
+                {type: 'gtc', name: 'JPN GTC (Oppama)', city: 'Oppama, Japan', lat: 35.333, lon: 139.667},
+                {type: 'gtc', name: 'NMEX GTC (Aguascalientes)', city: 'Aguascalientes, Mexico', lat: 21.884, lon: -102.2826},
+                {type: 'gtc', name: 'NMUK GTC (Sunderland)', city: 'Sunderland, UK', lat: 54.907, lon: -1.384}
+            ];
+
+            // Utility: project lon/lat to SVG coordinates (equirectangular projection)
+            function project(lon, lat, svgWidth = 1000, svgHeight = 500) {
+                const x = (lon + 180) / 360 * svgWidth;
+                const y = (90 - lat) / 180 * svgHeight;
+                return { x, y };
+            }
+
+            // Create markers using projection
+            markers.forEach(m => {
+                const p = project(m.lon, m.lat, 1000, 500);
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', p.x);
+                circle.setAttribute('cy', p.y);
+                circle.setAttribute('r', 6);
+                circle.setAttribute('class', 'map-marker ' + (m.type === 'gtc' ? 'marker-gtc' : 'marker-nissan'));
+                // mouse events
+                circle.addEventListener('mouseenter', (ev) => showTooltipAtPoint(ev, m, p));
+                circle.addEventListener('mouseleave', hideTooltip);
+                circle.addEventListener('click', (ev) => showTooltipAtPoint(ev, m, p, true));
+                markersGroup.appendChild(circle);
+            });
+
+            // Show tooltip positioned on the SVG point (converts SVG coords to screen coords)
+            function showTooltipAtPoint(ev, marker, p, persist=false) {
+                // p: {x, y} in SVG coord space
+                const pt = svg.createSVGPoint();
+                pt.x = p.x; pt.y = p.y;
+                const screenCTM = svg.getScreenCTM();
+                if (!screenCTM) return;
+                const screenPt = pt.matrixTransform(screenCTM);
+                const rect = mapWrapper.getBoundingClientRect();
+                // position tooltip relative to wrapper
+                tooltip.style.left = (screenPt.x - rect.left) + 'px';
+                tooltip.style.top = (screenPt.y - rect.top - 12) + 'px';
+                tooltip.innerHTML = `<strong>${marker.name}</strong><div style="font-size:12px;opacity:0.95">${marker.city}</div>`;
+                tooltip.style.display = 'block';
+            }
+
+            function hideTooltip() {
+                tooltip.style.display = 'none';
+            }
+
+            // Zoom & Pan
+            let scale = 1;
+            let minScale = 0.7;
+            let maxScale = 3;
+            let isDragging = false;
+            let startX = 0, startY = 0;
+            let translateX = 0, translateY = 0;
+
+            function applyTransform() {
+                const viewport = svg.querySelector('#viewport');
+                if (!viewport) return;
+                viewport.setAttribute('transform', `translate(${translateX},${translateY}) scale(${scale})`);
+            }
+
+            mapWrapper.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const delta = -e.deltaY || e.wheelDelta;
+                const zoomAmount = delta > 0 ? 1.08 : 0.92;
+                const newScale = Math.max(minScale, Math.min(maxScale, scale * zoomAmount));
+                scale = newScale;
+                applyTransform();
+            });
+
+            mapWrapper.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mapWrapper.style.cursor = 'grabbing';
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                applyTransform();
+            });
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                mapWrapper.style.cursor = 'default';
+            });
+
+            // Touch support (basic)
+            let lastTouch = null;
+            mapWrapper.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    lastTouch = e.touches[0];
+                }
+            }, {passive: true});
+            mapWrapper.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && lastTouch) {
+                    const t = e.touches[0];
+                    translateX += t.clientX - lastTouch.clientX;
+                    translateY += t.clientY - lastTouch.clientY;
+                    lastTouch = t;
+                    applyTransform();
+                }
+            }, {passive: true});
+            mapWrapper.addEventListener('touchend', () => { lastTouch = null; });
+        }
+
+        // Initialize map when DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initCourse();
+            // init map only if slide 3 exists
+            if (document.querySelector('.slide-3')) initMapInteractive();
+        });
+    </script>
+</html>
