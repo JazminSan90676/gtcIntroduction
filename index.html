@@ -720,6 +720,1745 @@
             .side-label { font-size: 11px; }
             .bottom-row { gap: 8px; }
         }
+
+        /* SLIDE 5: GTC Organizational Hierarchy */
+        .slide-5 {
+            background: white;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow: auto;
+        }
+
+        .slide-5-header {
+            width: 100%;
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .slide-5-header-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .slide-5-header-logo {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-5-header-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-5-header-line {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000 0%, #FF6B6B 50%, #FFB3B3 100%);
+            flex-shrink: 0;
+        }
+
+        .slide-5-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* SLIDE 6: GTC Americas */
+        .slide-6 {
+            background: white;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow: auto;
+        }
+
+        .slide-6-header {
+            width: 100%;
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .slide-6-header-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .slide-6-header-logo {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-6-header-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-6-header-line {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000 0%, #FF6B6B 50%, #FFB3B3 100%);
+            flex-shrink: 0;
+        }
+
+        .slide-6-content {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+            padding: 30px 40px;
+            overflow: auto;
+        }
+
+        .slide-6-images {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-6-images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .slide-6-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-6-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .slide-6-info-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .slide-6-building-title {
+            margin-top: 20px;
+        }
+
+        .slide-6-info-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .slide-6-info-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .slide-6-info-content strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .slide-6-building-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .slide-6-building-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding-left: 15px;
+        }
+
+        .slide-6-footer-text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: auto;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1200px) {
+            .slide-5 {
+                padding: 15px;
+            }
+            .slide-6-content {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            .slide-6-images-grid {
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .slide-5 {
+                padding: 10px;
+            }
+            .slide-6-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .slide-6-header-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .slide-5 {
+                padding: 8px;
+            }
+        }
+        
+        /* SLIDE 7: Regional Trainers Development Rules */
+        .slide-7 {
+            background: white;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .slide-7-header {
+            width: 100%;
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .slide-7-header-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .slide-7-header-logo {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-7-header-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-7-header-line {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000 0%, #FF6B6B 50%, #FFB3B3 100%);
+            flex-shrink: 0;
+        }
+
+        .slide-7-table-wrapper {
+            flex: 1;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .slide-7-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .slide-7-th-position, .slide-7-th-basic, .slide-7-th-advanced {
+            background: #4a6fa8;
+            color: white;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid #999;
+            text-align: left;
+        }
+
+        .slide-7-th-position { width: 22%; }
+        .slide-7-th-basic { width: 39%; }
+        .slide-7-th-advanced { width: 39%; }
+
+        .slide-7-pos-cell {
+            background: #c0c0c0;
+            text-align: center;
+            padding: 30px 15px !important;
+            border: 2px solid #999 !important;
+            vertical-align: middle;
+        }
+
+        .slide-7-pos-large {
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: #111;
+            line-height: 1;
+        }
+
+        .slide-7-pos-small {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+            margin-top: 8px;
+        }
+
+        .slide-7-basic-cell, .slide-7-adv-cell {
+            padding: 20px !important;
+            border: 2px solid #999 !important;
+            vertical-align: top;
+        }
+
+        .slide-7-basic-cell { background: #ffffff; }
+        .slide-7-adv-cell { background: #ffffff; }
+
+        .slide-7-rule-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #C41E3A;
+            margin-bottom: 12px;
+        }
+
+        .slide-7-box-exception, .slide-7-box-note {
+            background: #f9f9f9;
+            padding: 12px;
+            border-left: 4px solid #C41E3A;
+            margin-bottom: 12px;
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .slide-7-box-exception p, .slide-7-box-note p {
+            margin: 0;
+        }
+
+        .slide-7-box-example {
+            margin-bottom: 10px;
+        }
+
+        .slide-7-label-example {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .slide-7-groups-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .slide-7-group {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .slide-7-icon {
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .slide-7-group-text {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .slide-7-role {
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .slide-7-notes-box {
+            font-size: 0.78rem;
+            line-height: 1.35;
+            color: #333;
+        }
+
+        .slide-7-notes-box p {
+            margin: 6px 0;
+        }
+
+        .slide-7-plants-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+        }
+
+        .slide-7-plant-item {
+            text-align: center;
+        }
+
+        .slide-7-plant-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-decoration: underline;
+        }
+
+        .slide-7-techs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 8px;
+        }
+
+        .slide-7-tech {
+            font-size: 0.75rem;
+        }
+
+        .slide-7-arrow {
+            font-size: 1.1rem;
+            line-height: 0.9;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .slide-7-tech-name {
+            font-weight: 500;
+            font-size: 0.73rem;
+        }
+
+        .slide-7-books-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3px;
+        }
+
+        .slide-7-book {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .slide-7-header-title { font-size: 1.8rem; }
+            .slide-7-table-wrapper { padding: 15px; }
+            .slide-7-pos-large { font-size: 3rem; }
+            .slide-7-th-position, .slide-7-th-basic, .slide-7-th-advanced { padding: 12px; font-size: 0.95rem; }
+            .slide-7-plants-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+        }
+
+        @media (max-width: 900px) {
+            .slide-7-header { flex-direction: column; gap: 15px; }
+            .slide-7-header-title { font-size: 1.5rem; }
+            .slide-7-header-logo { width: 80px; height: 80px; }
+            .slide-7-table thead { display: none; }
+            .slide-7-table tbody tr { display: flex; flex-direction: column; }
+            .slide-7-pos-cell, .slide-7-basic-cell, .slide-7-adv-cell { width: 100%; display: block; }
+            .slide-7-pos-cell::before { content: "Position"; display: block; font-weight: 600; margin-bottom: 10px; font-size: 0.9rem; }
+            .slide-7-basic-cell::before { content: "Basic Skills"; display: block; font-weight: 600; margin-bottom: 10px; font-size: 0.9rem; }
+            .slide-7-adv-cell::before { content: "Advanced Skills"; display: block; font-weight: 600; margin-bottom: 10px; font-size: 0.9rem; }
+            .slide-7-plants-grid { grid-template-columns: 1fr; }
+        }
+
+        /* SLIDE 8: Regional Trainers Development Rules (RT) */
+        .slide-8 {
+            background: white;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .slide-8-header {
+            width: 100%;
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .slide-8-header-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .slide-8-header-logo {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-8-header-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-8-header-line {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000 0%, #FF6B6B 50%, #FFB3B3 100%);
+            flex-shrink: 0;
+        }
+
+        .slide-8-intro-text {
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            line-height: 1.5;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .slide-8-table-wrapper {
+            flex: 1;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .slide-8-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .slide-8-th-position, .slide-8-th-basic, .slide-8-th-advanced {
+            background: #4a6fa8;
+            color: white;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid #999;
+            text-align: left;
+        }
+
+        .slide-8-th-position { width: 22%; }
+        .slide-8-th-basic { width: 39%; }
+        .slide-8-th-advanced { width: 39%; }
+
+        .slide-8-pos-cell {
+            background: #c0c0c0;
+            text-align: center;
+            padding: 30px 15px !important;
+            border: 2px solid #999 !important;
+            vertical-align: middle;
+        }
+
+        .slide-8-pos-large {
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: #111;
+            line-height: 1;
+        }
+
+        .slide-8-pos-small {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+            margin-top: 8px;
+        }
+
+        .slide-8-basic-cell, .slide-8-adv-cell {
+            padding: 20px !important;
+            border: 2px solid #999 !important;
+            vertical-align: top;
+        }
+
+        .slide-8-basic-cell { background: #ffffff; }
+        .slide-8-adv-cell { background: #ffffff; }
+
+        .slide-8-rule-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #C41E3A;
+            margin-bottom: 12px;
+        }
+
+        .slide-8-box-note {
+            background: #f9f9f9;
+            padding: 12px;
+            border-left: 4px solid #C41E3A;
+            margin-bottom: 12px;
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .slide-8-box-note p {
+            margin: 0;
+        }
+
+        .slide-8-box-example {
+            margin-bottom: 10px;
+        }
+
+        .slide-8-label-example {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .slide-8-label-example-adv {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .slide-8-groups-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .slide-8-group {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .slide-8-group-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .slide-8-processes {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .slide-8-process {
+            background: #e8f0f7;
+            border: 1px solid #4a6fa8;
+            border-radius: 4px;
+            padding: 6px;
+            text-align: center;
+            min-width: 60px;
+            font-weight: 500;
+        }
+
+        .slide-8-role-label {
+            display: block;
+            font-size: 0.7rem;
+            margin-top: 2px;
+            color: #333;
+        }
+
+        .slide-8-arrow {
+            font-weight: 700;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .slide-8-result {
+            background: #d4e5f0;
+            border: 1px solid #4a6fa8;
+            border-radius: 4px;
+            padding: 6px;
+            text-align: center;
+            min-width: 60px;
+            font-weight: 600;
+        }
+
+        .slide-8-notes-box {
+            font-size: 0.78rem;
+            line-height: 1.35;
+            color: #333;
+        }
+
+        .slide-8-notes-box p {
+            margin: 6px 0;
+        }
+
+        .slide-8-plants-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .slide-8-plant-item {
+            text-align: center;
+        }
+
+        .slide-8-plant-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-decoration: underline;
+        }
+
+        .slide-8-techniques {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 8px;
+        }
+
+        .slide-8-technique {
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .slide-8-books-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3px;
+        }
+
+        .slide-8-book {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .slide-8-notes-box-adv {
+            font-size: 0.78rem;
+            line-height: 1.35;
+            color: #333;
+            margin-top: 8px;
+        }
+
+        .slide-8-notes-box-adv p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 1200px) {
+            .slide-8-header-title { font-size: 1.8rem; }
+            .slide-8-intro-text { padding: 12px 30px; font-size: 0.95rem; }
+            .slide-8-table-wrapper { padding: 15px; }
+            .slide-8-pos-large { font-size: 3rem; }
+            .slide-8-th-position, .slide-8-th-basic, .slide-8-th-advanced { padding: 12px; font-size: 0.95rem; }
+            .slide-8-plants-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+        }
+
+        @media (max-width: 900px) {
+            .slide-8-header { flex-direction: column; gap: 15px; }
+            .slide-8-header-title { font-size: 1.5rem; }
+            .slide-8-header-logo { width: 80px; height: 80px; }
+            .slide-8-intro-text { font-size: 0.9rem; padding: 10px 20px; }
+            .slide-8-table thead { display: none; }
+            .slide-8-table tbody tr { display: flex; flex-direction: column; }
+            .slide-8-pos-cell, .slide-8-basic-cell, .slide-8-adv-cell { width: 100%; display: block; }
+            .slide-8-plants-grid { grid-template-columns: 1fr; }
+        }
+
+        /* SLIDE 9: GTC Americas Training and Certification structure */
+        .slide-9 {
+            background: white;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            overflow: auto;
+        }
+
+        .slide-9-header {
+            width: 100%;
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .slide-9-header-title {
+            font-size: 1.85rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            line-height: 1.25;
+        }
+
+        .slide-9-header-logo {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-9-header-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-9-header-line {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000 0%, #FF6B6B 50%, #FFB3B3 100%);
+            flex-shrink: 0;
+        }
+
+        .slide-9-content {
+            flex: 1;
+            overflow: auto;
+            padding: 15px 25px 20px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Headers Row with Arrow */
+        .slide-9-headers-wrapper {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .slide-9-headers-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .slide-9-header-box {
+            background: #1a3a52;
+            color: white;
+            padding: 12px 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .slide-9-big-arrow {
+            font-size: 3.5rem;
+            color: #4a90e2;
+            font-weight: bold;
+            line-height: 1;
+            padding-top: 8px;
+        }
+
+        /* Duration Bar with Arrow */
+        .slide-9-duration-wrapper {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .slide-9-duration-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            flex: 1;
+            background: #c5dff8;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .slide-9-duration-item {
+            color: #1a3a52;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 5px 0;
+        }
+
+        .slide-9-duration-arrow {
+            font-size: 3.5rem;
+            color: #4a90e2;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        /* Main Grid */
+        .slide-9-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            flex: 1;
+            align-items: flex-start;
+        }
+
+        .slide-9-column-before,
+        .slide-9-column-during,
+        .slide-9-column-after {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Activity Boxes */
+        .slide-9-activity-box {
+            background: #0066cc;
+            color: white;
+            border: 3px solid white;
+            border-radius: 18px;
+            padding: 14px 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.82rem;
+            line-height: 1.25;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            min-width: 120px;
+            max-width: 140px;
+        }
+
+        .slide-9-big-box {
+            padding: 18px 14px;
+            min-width: 140px;
+            max-width: 160px;
+            font-size: 0.85rem;
+        }
+
+        .slide-9-orange-box {
+            background: #ff9500;
+            border: 3px solid white;
+        }
+
+        /* Images */
+        .slide-9-images-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        .slide-9-image-placeholder {
+            font-size: 2rem;
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-9-training-photo {
+            font-size: 2.2rem;
+            padding: 12px;
+            margin: 6px 0;
+            width: 90px;
+            height: 90px;
+        }
+
+        .slide-9-hand-image {
+            font-size: 2.5rem;
+            padding: 15px;
+            margin-top: 6px;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Arrows */
+        .slide-9-arrow-horizontal {
+            font-size: 1.8rem;
+            color: #c41e3a;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .slide-9-arrow-vertical {
+            font-size: 1.4rem;
+            color: #c41e3a;
+            font-weight: bold;
+            line-height: 1;
+            margin: 3px 0;
+        }
+
+        .slide-9-chevron-icon {
+            font-size: 2rem;
+            color: #ff9500;
+            font-weight: bold;
+            margin: 3px 0;
+        }
+
+        /* Labels and Badge */
+        .slide-9-label-bottom {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #333;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .slide-9-badge {
+            background: #c41e3a;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            margin-top: 8px;
+            min-width: 120px;
+        }
+
+        @media (max-width: 1200px) {
+            .slide-9-header-title { font-size: 1.6rem; }
+            .slide-9-content { padding: 12px 18px; gap: 10px; }
+            .slide-9-headers-row { gap: 10px; }
+            .slide-9-header-box { font-size: 0.8rem; padding: 10px 8px; }
+            .slide-9-big-arrow { font-size: 2.8rem; }
+            .slide-9-duration-row { gap: 8px; padding: 8px; }
+            .slide-9-duration-item { font-size: 0.8rem; }
+            .slide-9-duration-arrow { font-size: 2.8rem; }
+            .slide-9-grid { gap: 15px; }
+            .slide-9-activity-box { padding: 12px 10px; font-size: 0.75rem; min-width: 100px; max-width: 120px; }
+            .slide-9-big-box { padding: 15px 12px; min-width: 110px; max-width: 140px; }
+            .slide-9-training-photo { font-size: 1.8rem; width: 80px; height: 80px; padding: 10px; }
+            .slide-9-hand-image { font-size: 2rem; width: 85px; height: 85px; padding: 12px; }
+        }
+
+        @media (max-width: 900px) {
+            .slide-9-header { flex-direction: column; gap: 12px; }
+            .slide-9-header-title { font-size: 1.3rem; }
+            .slide-9-header-logo { width: 70px; height: 70px; }
+            .slide-9-content { padding: 10px 15px; gap: 8px; }
+            .slide-9-headers-wrapper { gap: 10px; }
+            .slide-9-headers-row { grid-template-columns: 1fr; gap: 8px; }
+            .slide-9-header-box { font-size: 0.75rem; padding: 8px; }
+            .slide-9-big-arrow { display: none; }
+            .slide-9-duration-wrapper { gap: 10px; }
+            .slide-9-duration-row { grid-template-columns: 1fr; gap: 6px; padding: 8px; }
+            .slide-9-duration-item { font-size: 0.75rem; }
+            .slide-9-duration-arrow { display: none; }
+            .slide-9-grid { grid-template-columns: 1fr; gap: 12px; }
+            .slide-9-activity-box { padding: 10px 8px; font-size: 0.7rem; min-width: 90px; max-width: 110px; }
+            .slide-9-big-box { padding: 12px 10px; min-width: 90px; max-width: 110px; }
+            .slide-9-training-photo { font-size: 1.5rem; width: 70px; height: 70px; }
+            .slide-9-hand-image { font-size: 1.8rem; width: 75px; height: 75px; }
+            .slide-9-images-row { gap: 10px; }
+            .slide-9-image-placeholder { font-size: 1.5rem; padding: 8px; }
+            .slide-9-badge { padding: 10px 14px; font-size: 0.8rem; }
+        }
+
+        @media (max-width: 600px) {
+            .slide-9-content { padding: 8px 12px; gap: 6px; }
+            .slide-9-header-title { font-size: 1rem; }
+            .slide-9-header-logo { width: 50px; height: 50px; }
+            .slide-9-headers-row { gap: 6px; }
+            .slide-9-header-box { font-size: 0.65rem; padding: 6px; }
+            .slide-9-duration-row { grid-template-columns: 1fr; gap: 4px; padding: 6px; }
+            .slide-9-duration-item { font-size: 0.65rem; }
+            .slide-9-grid { grid-template-columns: 1fr; gap: 8px; }
+            .slide-9-activity-box { padding: 8px 6px; font-size: 0.6rem; min-width: 70px; }
+            .slide-9-big-box { padding: 10px 8px; min-width: 70px; }
+            .slide-9-arrow-vertical { font-size: 1.1rem; }
+            .slide-9-training-photo { font-size: 1.2rem; width: 60px; height: 60px; padding: 8px; }
+            .slide-9-hand-image { font-size: 1.4rem; width: 65px; height: 65px; }
+            .slide-9-badge { padding: 8px 12px; font-size: 0.7rem; min-width: 90px; }
+        }
+
+        /* ===== SLIDE 10: GTC Americas Organization ===== */
+        .slide-10 {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+        }
+
+        .slide-10-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 0 30px 15px 30px;
+        }
+
+        .slide-10-header-title {
+            flex: 1;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin: 0;
+        }
+
+        .slide-10-header-logo {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+        }
+
+        .slide-10-header-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-10-header-line {
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000, #FFB3B3);
+            margin: 0;
+        }
+
+        .slide-10-content {
+            flex: 1;
+            overflow: auto;
+            padding: 15px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-10-org-grid {
+            display: grid;
+            grid-template-columns: 1fr 120px 1fr;
+            gap: 20px;
+            align-items: flex-start;
+            flex: 1;
+        }
+
+        /* Left Section */
+        .slide-10-left-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .slide-10-level-1,
+        .slide-10-level-2,
+        .slide-10-level-3,
+        .slide-10-level-4 {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .slide-10-box {
+            background: white;
+            border: 2px solid #1a3a52;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            min-width: 95px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-10-box-exec {
+            background: #1a3a52;
+            color: white;
+            font-weight: 700;
+            border-color: #1a3a52;
+        }
+
+        .slide-10-box-mgr {
+            background: #e8f0f7;
+            border-color: #4a6fa8;
+        }
+
+        .slide-10-box-spec {
+            background: #ffffff;
+            border-color: #666;
+        }
+
+        .slide-10-box-tech {
+            background: #f5f5f5;
+            border-color: #999;
+        }
+
+        .slide-10-name {
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .slide-10-role {
+            font-size: 0.7rem;
+            color: #666;
+            line-height: 1.1;
+        }
+
+        .slide-10-box-exec .slide-10-role {
+            color: #e8e8e8;
+        }
+
+        .slide-10-connector-down,
+        .slide-10-connector-middle,
+        .slide-10-connector-bottom {
+            width: 2px;
+            height: 12px;
+            background: #666;
+            margin: 3px 0;
+        }
+
+        /* Center Logo */
+        .slide-10-center-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-10-logo-circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #0066cc, #4a90e2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+        }
+
+        /* Right Section */
+        .slide-10-right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slide-10-right-subsection {
+            background: #f9f9f9;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .slide-10-subsection-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #1a3a52;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .slide-10-staff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .slide-10-staff-item {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .slide-10-staff-item .slide-10-name {
+            font-size: 0.75rem;
+            margin-bottom: 3px;
+        }
+
+        .slide-10-staff-item .slide-10-role {
+            font-size: 0.65rem;
+        }
+
+        .slide-10-subtitle-left {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #1a3a52;
+            text-align: center;
+            margin-top: 15px;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 1200px) {
+            .slide-10-header { gap: 20px; padding: 0 20px 12px 20px; }
+            .slide-10-header-title { font-size: 1.7rem; }
+            .slide-10-header-logo { width: 70px; height: 70px; }
+            .slide-10-content { padding: 12px 15px; }
+            .slide-10-org-grid { grid-template-columns: 1fr 100px 1fr; gap: 15px; }
+            .slide-10-logo-circle { width: 85px; height: 85px; font-size: 1.5rem; }
+            .slide-10-box { min-width: 85px; padding: 8px; font-size: 0.75rem; }
+            .slide-10-level-1, .slide-10-level-2, .slide-10-level-3, .slide-10-level-4 { gap: 12px; }
+            .slide-10-staff-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+        }
+
+        @media (max-width: 900px) {
+            .slide-10-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+            .slide-10-header-title { font-size: 1.4rem; }
+            .slide-10-header-logo { width: 65px; height: 65px; }
+            .slide-10-content { padding: 10px 12px; }
+            .slide-10-org-grid { grid-template-columns: 1fr; gap: 12px; }
+            .slide-10-center-logo { display: none; }
+            .slide-10-logo-circle { width: 75px; height: 75px; }
+            .slide-10-left-section { gap: 10px; }
+            .slide-10-right-section { gap: 15px; }
+            .slide-10-level-1, .slide-10-level-2, .slide-10-level-3, .slide-10-level-4 { gap: 8px; }
+            .slide-10-box { min-width: 75px; padding: 7px; font-size: 0.7rem; }
+            .slide-10-staff-grid { grid-template-columns: 1fr; gap: 6px; }
+            .slide-10-right-subsection { padding: 10px; }
+            .slide-10-subsection-title { font-size: 0.75rem; margin-bottom: 8px; }
+        }
+
+        @media (max-width: 600px) {
+            .slide-10-header { flex-direction: column; gap: 8px; padding: 0 12px 10px 12px; }
+            .slide-10-header-title { font-size: 1.1rem; }
+            .slide-10-header-logo { width: 50px; height: 50px; }
+            .slide-10-content { padding: 8px 10px; }
+            .slide-10-box { min-width: 60px; padding: 6px; font-size: 0.6rem; }
+            .slide-10-name { font-size: 0.65rem; }
+            .slide-10-role { font-size: 0.55rem; }
+            .slide-10-logo-circle { width: 60px; height: 60px; font-size: 1.2rem; }
+            .slide-10-level-1, .slide-10-level-2, .slide-10-level-3, .slide-10-level-4 { gap: 6px; }
+            .slide-10-staff-grid { grid-template-columns: 1fr; gap: 5px; }
+            .slide-10-staff-item { padding: 6px; }
+            .slide-10-right-subsection { padding: 8px; }
+            .slide-10-subsection-title { font-size: 0.65rem; margin-bottom: 6px; }
+        }
+
+        /* ===== SLIDE 11: Quiz Final ===== */
+        .slide-11-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 0 30px 15px 30px;
+        }
+
+        .slide-11-header-title {
+            flex: 1;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin: 0;
+        }
+
+        .slide-11-header-logo {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+        }
+
+        .slide-11-header-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-11-header-line {
+            height: 8px;
+            background: linear-gradient(90deg, #CC0000, #FFB3B3);
+            margin: 0;
+        }
+
+        .slide-11-content {
+            flex: 1;
+            overflow: auto;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Quiz Container */
+        .slide-11-quiz-container {
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .slide-11-question-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Progress Bar */
+        .slide-11-progress-info {
+            margin-bottom: 25px;
+        }
+
+        .slide-11-counter {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a3a52;
+            margin-bottom: 8px;
+        }
+
+        .slide-11-progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e8e8e8;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slide-11-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #CC0000, #FF6666);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        /* Question Text */
+        .slide-11-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin: 0 0 25px 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        /* Options */
+        .slide-11-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .slide-11-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 18px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .slide-11-option:hover:not(:disabled) {
+            border-color: #0066cc;
+            background: #f0f7ff;
+            transform: translateX(5px);
+        }
+
+        .slide-11-option:disabled {
+            cursor: not-allowed;
+        }
+
+        .slide-11-option.correct {
+            border-color: #27ae60;
+            background: #d5f4e6;
+            color: #27ae60;
+        }
+
+        .slide-11-option.incorrect {
+            border-color: #e74c3c;
+            background: #fadbd8;
+            color: #e74c3c;
+        }
+
+        .option-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .slide-11-option.correct .option-letter {
+            background: #27ae60;
+        }
+
+        .slide-11-option.incorrect .option-letter {
+            background: #e74c3c;
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        /* Feedback */
+        .slide-11-feedback {
+            background: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-11-feedback.correct {
+            border-left-color: #27ae60;
+            background: #eafaf1;
+        }
+
+        .slide-11-feedback.incorrect {
+            border-left-color: #e74c3c;
+            background: #fadbd8;
+        }
+
+        .slide-11-feedback-message {
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .slide-11-feedback.correct .slide-11-feedback-message {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .slide-11-feedback.incorrect .slide-11-feedback-message {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        /* Next Button */
+        .slide-11-next-btn {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .slide-11-next-btn:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+        }
+
+        /* Results Container */
+        .slide-11-results-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .slide-11-results-content {
+            text-align: center;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            animation: slideIn 0.5s ease;
+        }
+
+        .slide-11-results-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin: 0 0 30px 0;
+        }
+
+        .slide-11-score-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #CC0000, #FF6666);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(204, 0, 0, 0.3);
+        }
+
+        .slide-11-score-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+
+        .slide-11-score-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .slide-11-results-message {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 20px;
+        }
+
+        .slide-11-results-details {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .slide-11-result-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .slide-11-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .slide-11-result-item.correct {
+            color: #27ae60;
+        }
+
+        .slide-11-result-item.incorrect {
+            color: #e74c3c;
+        }
+
+        .slide-11-result-item strong {
+            font-weight: 600;
+        }
+
+        .slide-11-restart-btn {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .slide-11-restart-btn:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+        }
+
+        @media (max-width: 1200px) {
+            .slide-11-header { gap: 20px; padding: 0 20px 12px 20px; }
+            .slide-11-header-title { font-size: 1.7rem; }
+            .slide-11-header-logo { width: 70px; height: 70px; }
+            .slide-11-content { padding: 15px 20px; }
+            .slide-11-question-section { padding: 25px; }
+            .slide-11-question { font-size: 1.1rem; }
+            .slide-11-option { padding: 12px 15px; font-size: 0.9rem; }
+        }
+
+        @media (max-width: 900px) {
+            .slide-11-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+            .slide-11-header-title { font-size: 1.4rem; }
+            .slide-11-header-logo { width: 65px; height: 65px; }
+            .slide-11-content { padding: 12px 15px; }
+            .slide-11-quiz-container { max-width: 600px; }
+            .slide-11-question-section { padding: 20px; }
+            .slide-11-question { font-size: 1rem; }
+            .slide-11-option { padding: 10px 12px; font-size: 0.85rem; gap: 10px; }
+            .option-letter { width: 28px; height: 28px; font-size: 0.8rem; }
+            .slide-11-score-circle { width: 120px; height: 120px; }
+            .slide-11-score-number { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 600px) {
+            .slide-11-header { flex-direction: column; gap: 8px; padding: 0 12px 10px 12px; }
+            .slide-11-header-title { font-size: 1.1rem; }
+            .slide-11-header-logo { width: 50px; height: 50px; }
+            .slide-11-content { padding: 10px; }
+            .slide-11-question-section { padding: 15px; }
+            .slide-11-question { font-size: 0.95rem; margin-bottom: 15px; }
+            .slide-11-option { padding: 8px 10px; font-size: 0.8rem; gap: 8px; }
+            .option-letter { width: 24px; height: 24px; font-size: 0.7rem; }
+            .slide-11-next-btn { padding: 8px 15px; font-size: 0.8rem; }
+            .slide-11-results-content { padding: 25px 15px; }
+            .slide-11-results-title { font-size: 1.4rem; }
+            .slide-11-score-circle { width: 100px; height: 100px; margin-bottom: 20px; }
+            .slide-11-score-number { font-size: 2rem; }
+            .slide-11-results-message { font-size: 1rem; }
+            .slide-11-restart-btn { padding: 10px 20px; font-size: 0.85rem; }
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -912,9 +2651,678 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- SLIDE 5: GTC Organizational Hierarchy -->
+                    <div class="slide-item">
+                        <div class="slide slide-5">
+                            <div class="slide-5-header">
+                                <h1 class="slide-5-header-title">GTC - Basic & Advanced Skills Deployment</h1>
+                                <div class="slide-5-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-5-header-line"></div>
+                            <img class="slide-5-image" src="assets/images/slide-5-hierarchy.jpg" alt="GTC Organizational Hierarchy">
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 6: GTC Americas -->
+                    <div class="slide-item">
+                        <div class="slide slide-6">
+                            <div class="slide-6-header">
+                                <h1 class="slide-6-header-title">GTC Americas</h1>
+                                <div class="slide-6-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-6-header-line"></div>
+                            
+                            <div class="slide-6-content">
+                                <div class="slide-6-images">
+                                    <div class="slide-6-images-grid">
+                                        <img src="assets/images/gtc-ribbon-cutting-1.jpg" alt="GTC Ribbon Cutting 1" class="slide-6-img">
+                                        <img src="assets/images/gtc-facility-1.jpg" alt="GTC Facility 1" class="slide-6-img">
+                                        <img src="assets/images/gtc-ribbon-cutting-2.jpg" alt="GTC Ribbon Cutting 2" class="slide-6-img">
+                                        <img src="assets/images/gtc-facility-2.jpg" alt="GTC Facility 2" class="slide-6-img">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-6-info">
+                                    <h2 class="slide-6-info-title">General Information</h2>
+                                    <div class="slide-6-info-content">
+                                        <p><strong>Surface:</strong> <span>1,665 M2 two floors</span></p>
+                                        <p><strong>Started building:</strong> <span>June 4, 2014</span></p>
+                                        <p><strong>Started Operations:</strong> <span>May 1st, 2015</span></p>
+                                    </div>
+                                    
+                                    <h2 class="slide-6-info-title slide-6-building-title">Building Information:</h2>
+                                    <div class="slide-6-building-content">
+                                        <p>40 Capacity for 40 administrative people</p>
+                                        <p>4 Training rooms</p>
+                                        <p>1 Video conference room</p>
+                                        <p>2 E learning room</p>
+                                    </div>
+                                    
+                                    <p class="slide-6-footer-text">Inaugurated by Armando Ávila Manufacturing VP NMEX on April 16th, 2015</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 7: Regional Trainers Development Rules -->
+                    <div class="slide-item">
+                        <div class="slide slide-7">
+                            <div class="slide-7-header">
+                                <h1 class="slide-7-header-title">Regional Trainers Development Rules</h1>
+                                <div class="slide-7-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-7-header-line"></div>
+
+                            <div class="slide-7-table-wrapper">
+                                <table class="slide-7-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="slide-7-th-position">Position</th>
+                                            <th class="slide-7-th-basic">Basic Skills</th>
+                                            <th class="slide-7-th-advanced">Advanced Skills</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <!-- Position Column -->
+                                            <td class="slide-7-pos-cell">
+                                                <div class="slide-7-pos-large">MT</div>
+                                                <div class="slide-7-pos-small">(Master Trainer)</div>
+                                            </td>
+                                            
+                                            <!-- Basic Skills Column -->
+                                            <td class="slide-7-basic-cell">
+                                                <div class="slide-7-rule-title">1 MT/shop•line•shift</div>
+                                                
+                                                <div class="slide-7-box-exception">
+                                                    <p>Exceptions: in case that be designed to dedicate as a MT as a unique activity. (Just in day shift, etc.) we can adopt the next condition: <strong>1 / shop•line</strong></p>
+                                                </div>
+                                                
+                                                <div class="slide-7-box-example">
+                                                    <div class="slide-7-label-example">NMEX Plant Example</div>
+                                                    
+                                                    <div class="slide-7-groups-container">
+                                                        <div class="slide-7-group">
+                                                            <div class="slide-7-icon">👷</div>
+                                                            <div class="slide-7-group-text">Group A</div>
+                                                            <div class="slide-7-role">MT</div>
+                                                        </div>
+                                                        <div class="slide-7-group">
+                                                            <div class="slide-7-icon">👷</div>
+                                                            <div class="slide-7-group-text">Group B</div>
+                                                            <div class="slide-7-role">MT</div>
+                                                        </div>
+                                                        <div class="slide-7-group">
+                                                            <div class="slide-7-icon">👷</div>
+                                                            <div class="slide-7-group-text">Group C</div>
+                                                            <div class="slide-7-role">MT</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="slide-7-notes-box">
+                                                    <p><strong>Notes:</strong></p>
+                                                    <p>1.- Specialist person (SV /SSV) of each process is the ideal to get the position of MT.</p>
+                                                    <p>2.- It is necessary to fill the positions of MT immediately if some one leaves the plant for any reason.</p>
+                                                </div>
+                                            </td>
+                                            
+                                            <!-- Advanced Skills Column -->
+                                            <td class="slide-7-adv-cell">
+                                                <div class="slide-7-rule-title">1 MT/technique•line</div>
+                                                
+                                                <div class="slide-7-box-note">
+                                                    <p>Note: The operators of highest level at production line can be selected as candidates to be MT.</p>
+                                                </div>
+                                                
+                                                <div class="slide-7-box-example">
+                                                    <div class="slide-7-label-example">Example of NMEX Plant</div>
+                                                    
+                                                    <div class="slide-7-plants-grid">
+                                                        <div class="slide-7-plant-item">
+                                                            <div class="slide-7-plant-name">Plant A1</div>
+                                                            <div class="slide-7-techs-list">
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic 1</div>
+                                                                </div>
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic "N"</div>
+                                                                </div>
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic "N"</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="slide-7-books-grid">
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="slide-7-plant-item">
+                                                            <div class="slide-7-plant-name">Plant A2</div>
+                                                            <div class="slide-7-techs-list">
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic 1</div>
+                                                                </div>
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic "N"</div>
+                                                                </div>
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic "N"</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="slide-7-books-grid">
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="slide-7-plant-item">
+                                                            <div class="slide-7-plant-name">Civac Plant</div>
+                                                            <div class="slide-7-techs-list">
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic 1</div>
+                                                                </div>
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic "N"</div>
+                                                                </div>
+                                                                <div class="slide-7-tech">
+                                                                    <div class="slide-7-arrow">👆</div>
+                                                                    <div class="slide-7-tech-name">Technic "N"</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="slide-7-books-grid">
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                                <div class="slide-7-book">📕</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 8: Regional Trainers Development Rules (RT) -->
+                    <div class="slide-item">
+                        <div class="slide slide-8">
+                            <div class="slide-8-header">
+                                <h1 class="slide-8-header-title">Regional Trainers Development Rules</h1>
+                                <div class="slide-8-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-8-header-line"></div>
+
+                            <div class="slide-8-intro-text">
+                                This guide from GTC define the number of Regional Trainers required as a minimum standard which should be developed in every single location of Americas Region.
+                            </div>
+
+                            <div class="slide-8-table-wrapper">
+                                <table class="slide-8-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="slide-8-th-position">Position</th>
+                                            <th class="slide-8-th-basic">Basic Skills</th>
+                                            <th class="slide-8-th-advanced">Advanced Skills</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <!-- Position Column -->
+                                            <td class="slide-8-pos-cell">
+                                                <div class="slide-8-pos-large">RT</div>
+                                                <div class="slide-8-pos-small">(Regional Trainer)</div>
+                                            </td>
+                                            
+                                            <!-- Basic Skills Column -->
+                                            <td class="slide-8-basic-cell">
+                                                <div class="slide-8-rule-title">1 RT / shop•line•group</div>
+                                                
+                                                <div class="slide-8-box-note">
+                                                    <p>Note: Every Supervisor must be considered into this rule.</p>
+                                                </div>
+                                                
+                                                <div class="slide-8-box-example">
+                                                    <div class="slide-8-label-example">Example of one of NMEX plant</div>
+                                                    
+                                                    <div class="slide-8-groups-container">
+                                                        <div class="slide-8-group">
+                                                            <div class="slide-8-group-name">Group A</div>
+                                                            <div class="slide-8-processes">
+                                                                <div class="slide-8-process">PROCESS 1<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-process">PROCESS 2<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-process">PROCESS 3<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-arrow">→</div>
+                                                                <div class="slide-8-result">RESULTS<br><span class="slide-8-role-label">SV= RT's</span></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="slide-8-group">
+                                                            <div class="slide-8-group-name">Group B</div>
+                                                            <div class="slide-8-processes">
+                                                                <div class="slide-8-process">PROCESS 1<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-process">PROCESS 2<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-process">PROCESS 3<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-arrow">→</div>
+                                                                <div class="slide-8-result">RESULTS<br><span class="slide-8-role-label">SV= RT's</span></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="slide-8-group">
+                                                            <div class="slide-8-group-name">Group C</div>
+                                                            <div class="slide-8-processes">
+                                                                <div class="slide-8-process">PROCESS 1<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-process">PROCESS 2<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-process">PROCESS 3<br><span class="slide-8-role-label">SV= RT</span></div>
+                                                                <div class="slide-8-arrow">→</div>
+                                                                <div class="slide-8-result">RESULTS<br><span class="slide-8-role-label">SV= RT's</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="slide-8-notes-box">
+                                                    <p><strong>Note :</strong></p>
+                                                    <p>1.- All the Supervisors or Senior Supervisors of each location, line and group should receive the training and get the certification as a Regional Trainer.</p>
+                                                </div>
+                                            </td>
+                                            
+                                            <!-- Advanced Skills Column -->
+                                            <td class="slide-8-adv-cell">
+                                                <div class="slide-8-rule-title">1 RT / Skill•line•shift</div>
+                                                
+                                                <div class="slide-8-label-example-adv">Example of NMEX site</div>
+                                                
+                                                <div class="slide-8-plants-grid">
+                                                    <div class="slide-8-plant-item">
+                                                        <div class="slide-8-plant-name">Plant A1</div>
+                                                        <div class="slide-8-techniques">
+                                                            <div class="slide-8-technique">Technique 1</div>
+                                                            <div class="slide-8-technique">Technique 2</div>
+                                                            <div class="slide-8-technique">Technique "N"</div>
+                                                        </div>
+                                                        <div class="slide-8-books-grid">
+                                                            <div class="slide-8-book">📕</div>
+                                                            <div class="slide-8-book">📕</div>
+                                                            <div class="slide-8-book">📕</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="slide-8-plant-item">
+                                                        <div class="slide-8-plant-name">Plant A2</div>
+                                                        <div class="slide-8-techniques">
+                                                            <div class="slide-8-technique">Technique 1</div>
+                                                            <div class="slide-8-technique">Technique 2</div>
+                                                            <div class="slide-8-technique">Technique "N"</div>
+                                                        </div>
+                                                        <div class="slide-8-books-grid">
+                                                            <div class="slide-8-book">📕</div>
+                                                            <div class="slide-8-book">📕</div>
+                                                            <div class="slide-8-book">📕</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="slide-8-plant-item">
+                                                        <div class="slide-8-plant-name">Civac Plant</div>
+                                                        <div class="slide-8-techniques">
+                                                            <div class="slide-8-technique">Technique 1</div>
+                                                            <div class="slide-8-technique">Technique 2</div>
+                                                            <div class="slide-8-technique">Technique "N"</div>
+                                                        </div>
+                                                        <div class="slide-8-books-grid">
+                                                            <div class="slide-8-book">📕</div>
+                                                            <div class="slide-8-book">📕</div>
+                                                            <div class="slide-8-book">📕</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="slide-8-notes-box-adv">
+                                                    <p><strong>Note:</strong></p>
+                                                    <p>1.- The specialist (operator) of each process is the ideal to get the RT certification.</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 9: GTC Americas Training and Certification structure -->
+                    <div class="slide-item">
+                        <div class="slide slide-9">
+                            <div class="slide-9-header">
+                                <h1 class="slide-9-header-title">GTC Americas: Training and Certification structure of Master Trainers</h1>
+                                <div class="slide-9-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-9-header-line"></div>
+
+                            <div class="slide-9-content">
+                                <!-- Top Headers Bar with Arrow -->
+                                <div class="slide-9-headers-wrapper">
+                                    <div class="slide-9-headers-row">
+                                        <div class="slide-9-header-box">Activities Before<br>Training</div>
+                                        <div class="slide-9-header-box">Activities During<br>Training</div>
+                                        <div class="slide-9-header-box">Activities After<br>Training</div>
+                                    </div>
+                                    <div class="slide-9-big-arrow">→</div>
+                                </div>
+
+                                <!-- Duration Bar with Arrow -->
+                                <div class="slide-9-duration-wrapper">
+                                    <div class="slide-9-duration-row">
+                                        <div class="slide-9-duration-item">N-1 Month</div>
+                                        <div class="slide-9-duration-item">4.5 Month</div>
+                                        <div class="slide-9-duration-item">Monitoring 1 Year:</div>
+                                    </div>
+                                    <div class="slide-9-duration-arrow">→</div>
+                                </div>
+
+                                <!-- Main Content Grid -->
+                                <div class="slide-9-grid">
+                                    <!-- Column 1: Before -->
+                                    <div class="slide-9-column-before">
+                                        <div class="slide-9-activity-box slide-9-big-box">Preparing of<br>Training for the<br>MT by GMT</div>
+                                        <div class="slide-9-images-row">
+                                            <div class="slide-9-image-placeholder">📋</div>
+                                            <div class="slide-9-image-placeholder">📊</div>
+                                        </div>
+                                        <div class="slide-9-arrow-horizontal">→</div>
+                                    </div>
+
+                                    <!-- Column 2: During -->
+                                    <div class="slide-9-column-during">
+                                        <div class="slide-9-activity-box">Training<br>3 Week</div>
+                                        <div class="slide-9-image-placeholder slide-9-training-photo">👥</div>
+
+                                        <div class="slide-9-activity-box">Skill up<br>3 Month</div>
+                                        <div style="height: 8px;"></div>
+
+                                        <div class="slide-9-activity-box">Certification<br>3 Week</div>
+                                        <div class="slide-9-image-placeholder slide-9-training-photo">👨‍🏫</div>
+
+                                        <div class="slide-9-label-bottom">Training Plan MT'S by specialty</div>
+                                    </div>
+
+                                    <!-- Column 3: After -->
+                                    <div class="slide-9-column-after">
+                                        <div class="slide-9-activity-box">Monitoring MT's role<br>by GMT</div>
+                                        <div class="slide-9-arrow-vertical">↓</div>
+
+                                        <div class="slide-9-activity-box">Monitoring RT's<br>role by MT</div>
+                                        <div class="slide-9-arrow-vertical">↓</div>
+
+                                        <div class="slide-9-activity-box">Confirmation to<br>the technicians</div>
+
+                                        <div class="slide-9-chevron-icon">⌄</div>
+
+                                        <div class="slide-9-activity-box slide-9-orange-box">Standard<br>Respect</div>
+                                        <div class="slide-9-image-placeholder slide-9-hand-image">✋</div>
+
+                                        <div class="slide-9-badge">Quality Origin</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 10: GTC Americas Organization -->
+                    <div class="slide-item">
+                        <div class="slide slide-10">
+                            <div class="slide-10-header">
+                                <h1 class="slide-10-header-title">GTC Americas Organization</h1>
+                                <div class="slide-10-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-10-header-line"></div>
+
+                            <div class="slide-10-content">
+                                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; align-items: start; padding: 0 25px; height: 100%;">
+                                    <!-- LEFT SECTION: Organizational Chart -->
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; padding-top: 10px;">
+                                        <!-- Level 1: Subdirector -->
+                                        <div class="slide-10-box slide-10-box-exec" style="min-width: 130px; padding: 8px;">
+                                            <div class="slide-10-name" style="font-size: 0.8rem;">German Alvarado</div>
+                                            <div class="slide-10-role" style="font-size: 0.7rem; color: #e8e8e8;">SUBDIRECTOR NEW</div>
+                                        </div>
+
+                                        <!-- Vertical connector -->
+                                        <div style="width: 2px; height: 15px; background: #999;"></div>
+
+                                        <!-- Level 2: Sr Manager -->
+                                        <div class="slide-10-box slide-10-box-mgr" style="min-width: 130px; padding: 8px;">
+                                            <div class="slide-10-name" style="font-size: 0.8rem;">Claudia Gutierrez</div>
+                                            <div class="slide-10-role" style="font-size: 0.7rem;">SR MANAGER NPW</div>
+                                        </div>
+
+                                        <!-- Vertical connector -->
+                                        <div style="width: 2px; height: 15px; background: #999;"></div>
+
+                                        <!-- Level 3: Jr Manager -->
+                                        <div class="slide-10-box slide-10-box-spec" style="min-width: 130px; padding: 8px;">
+                                            <div class="slide-10-name" style="font-size: 0.8rem;">Omar Duran</div>
+                                            <div class="slide-10-role" style="font-size: 0.7rem;">JR MANAGER NPW</div>
+                                        </div>
+
+                                        <!-- Vertical connector -->
+                                        <div style="width: 2px; height: 15px; background: #999;"></div>
+
+                                        <!-- Level 4: Four Department Heads -->
+                                        <div style="position: relative; width: 100%; display: flex; justify-content: center;">
+                                            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 280px; height: 2px; background: #999;"></div>
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; z-index: 2; padding-top: 5px;">
+                                                <div class="slide-10-box slide-10-box-tech" style="min-width: 100px; padding: 7px;">
+                                                    <div class="slide-10-name" style="font-size: 0.7rem;">Israel Diaz</div>
+                                                    <div class="slide-10-role" style="font-size: 0.6rem;">GMT PRESS</div>
+                                                </div>
+                                                <div class="slide-10-box slide-10-box-tech" style="min-width: 100px; padding: 7px;">
+                                                    <div class="slide-10-name" style="font-size: 0.7rem;">Jose Cruz R.</div>
+                                                    <div class="slide-10-role" style="font-size: 0.6rem;">GMT PLASTICS</div>
+                                                </div>
+                                                <div class="slide-10-box slide-10-box-tech" style="min-width: 100px; padding: 7px;">
+                                                    <div class="slide-10-name" style="font-size: 0.7rem;">Gustavo zenteno</div>
+                                                    <div class="slide-10-role" style="font-size: 0.6rem;">GMT DIE MAINT.</div>
+                                                </div>
+                                                <div class="slide-10-box slide-10-box-tech" style="min-width: 100px; padding: 7px;">
+                                                    <div class="slide-10-name" style="font-size: 0.7rem;">Jose Delgado</div>
+                                                    <div class="slide-10-role" style="font-size: 0.6rem;">GMT TACH</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Vertical connector -->
+                                        <div style="width: 2px; height: 12px; background: #999;"></div>
+
+                                        <!-- Bottom three boxes -->
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; width: 100%;">
+                                            <div class="slide-10-box slide-10-box-tech" style="min-width: 90px; padding: 7px;">
+                                                <div class="slide-10-name" style="font-size: 0.7rem;">Jose Pineda</div>
+                                                <div class="slide-10-role" style="font-size: 0.6rem;">GMT BODY</div>
+                                            </div>
+                                            <div class="slide-10-box slide-10-box-tech" style="min-width: 90px; padding: 7px;">
+                                                <div class="slide-10-name" style="font-size: 0.7rem;">Antonio Ruvalcaba</div>
+                                                <div class="slide-10-role" style="font-size: 0.6rem;">GMT VQA</div>
+                                            </div>
+                                            <div class="slide-10-box slide-10-box-tech" style="min-width: 90px; padding: 7px;">
+                                                <div class="slide-10-name" style="font-size: 0.7rem;">Ismael Gomez</div>
+                                                <div class="slide-10-role" style="font-size: 0.6rem;">GMT PAINT</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- RIGHT SECTION: Part-time Staff -->
+                                    <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 10px;">
+                                        <!-- Vehicles Sites Section -->
+                                        <div style="border: 2px solid #4a90e2; border-radius: 8px; padding: 12px; background: #f9f9f9; flex: 1;">
+                                            <div style="font-weight: 700; font-size: 0.8rem; color: #1a3a52; margin-bottom: 10px; line-height: 1.2; text-align: center;">GMT´s Part time dedicated to traini...ng –<br>Vehicles Sites</div>
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">A. Delgado</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT -BQA</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">J. Morales</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT -PQA</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">J.E De la Cruz</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT -BQA</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">V. Serrato</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT - Welding</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">J. Padilla</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT –<br>Anti rusting</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">G. Zenteno</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT –<br>Die Maint.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Power Trane Sites Section -->
+                                        <div style="border: 2px solid #4a90e2; border-radius: 8px; padding: 12px; background: #f9f9f9; flex: 1;">
+                                            <div style="font-weight: 700; font-size: 0.8rem; color: #1a3a52; margin-bottom: 10px; line-height: 1.2; text-align: center;">GMT´s Part time dedicated to training activities –<br>Power Trane Sites</div>
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">A. Ibarra</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT–<br>Assembly PT</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">E. Martínez</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT –<br>Machining PT</div>
+                                                </div>
+                                                <div style="background: white; border: 1px solid #ccc; border-radius: 6px; padding: 7px; text-align: center; grid-column: 1 / -1;">
+                                                    <div style="font-weight: 600; font-size: 0.7rem; margin-bottom: 2px;">D. Ibarra</div>
+                                                    <div style="font-size: 0.6rem; color: #666;">GMT–<br>Quality PT</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 11: Quiz Final -->
+                    <div class="slide-item">
+                        <div class="slide slide-11">
+                            <div class="slide-11-header">
+                                <h1 class="slide-11-header-title">Quiz Final - GTC Nissan</h1>
+                                <div class="slide-11-header-logo">
+                                    <img src="assets/images/nissan-production-way.png" alt="Nissan Production Way">
+                                </div>
+                            </div>
+                            <div class="slide-11-header-line"></div>
+
+                            <div class="slide-11-content">
+                                <!-- Quiz Container -->
+                                <div class="slide-11-quiz-container" id="quizContainer">
+                                    <!-- Question Section -->
+                                    <div class="slide-11-question-section">
+                                        <div class="slide-11-progress-info">
+                                            <span id="questionCounter" class="slide-11-counter">Pregunta 1 de 4</span>
+                                            <div class="slide-11-progress-bar">
+                                                <div class="slide-11-progress-fill" id="progressFill" style="width: 25%;"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <h2 class="slide-11-question" id="questionText">Pregunta 1</h2>
+
+                                        <!-- Options -->
+                                        <div class="slide-11-options">
+                                            <button class="slide-11-option" data-index="0" onclick="selectAnswer(0)">
+                                                <span class="option-letter">A</span>
+                                                <span class="option-text" id="option0"></span>
+                                            </button>
+                                            <button class="slide-11-option" data-index="1" onclick="selectAnswer(1)">
+                                                <span class="option-letter">B</span>
+                                                <span class="option-text" id="option1"></span>
+                                            </button>
+                                            <button class="slide-11-option" data-index="2" onclick="selectAnswer(2)">
+                                                <span class="option-letter">C</span>
+                                                <span class="option-text" id="option2"></span>
+                                            </button>
+                                            <button class="slide-11-option" data-index="3" onclick="selectAnswer(3)">
+                                                <span class="option-letter">D</span>
+                                                <span class="option-text" id="option3"></span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Feedback Section -->
+                                        <div class="slide-11-feedback" id="feedbackSection" style="display: none;">
+                                            <div class="slide-11-feedback-message" id="feedbackMessage"></div>
+                                            <button class="slide-11-next-btn" id="nextQuestionBtn" onclick="nextQuestion()">Siguiente Pregunta →</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Results Section -->
+                                <div class="slide-11-results-container" id="resultsContainer" style="display: none;">
+                                    <div class="slide-11-results-content">
+                                        <h2 class="slide-11-results-title">¡Quiz Completado!</h2>
+                                        
+                                        <div class="slide-11-score-circle">
+                                            <div class="slide-11-score-number" id="finalScore">0</div>
+                                            <div class="slide-11-score-label">Puntuación</div>
+                                        </div>
+
+                                        <div class="slide-11-results-message" id="resultsMessage">
+                                            Buen trabajo
+                                        </div>
+
+                                        <div class="slide-11-results-details" id="resultsDetails">
+                                            <!-- Detalles dinámicos -->
+                                        </div>
+
+                                        <button class="slide-11-restart-btn" onclick="restartQuiz()">Reintentar Quiz</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="course-controls">
             <div class="controls-inner">
                 <!-- Sección de Progreso -->
@@ -946,7 +3354,7 @@
         
         // Configuración del curso
         const courseConfig = {
-            totalSlides: 2, // Se actualizará automáticamente
+            totalSlides: 11, // Se actualizará automáticamente
             currentSlide: 1,
             courseId: 'GTC-001', // ID único del módulo
             userId: null, // Se obtendrá de SharePoint/contexto corporativo
@@ -1185,6 +3593,204 @@
             initCourse();
             // init map only if slide 3 exists
             if (document.querySelector('.slide-3')) initMapInteractive();
+            // Initialize quiz when DOM ready
+            if (document.querySelector('.slide-11')) initQuiz();
         });
+
+        // ===== QUIZ SYSTEM (SLIDE 11) =====
+        // Quiz Data
+        const quizData = {
+            questions: [
+                {
+                    question: "¿Cuántos GTC principales hay?",
+                    options: [
+                        "2 - NMUK y JPN",
+                        "3 - NMUK, JPN, NMEX",
+                        "4 - NMUK, JPN, NMEX, India",
+                        "5 - Todos los anteriores más China"
+                    ],
+                    correct: 1,
+                    rationale: "Los tres GTC principales de Nissan son: NMUK (Reino Unido), JPN (Japón) y NMEX (México)."
+                },
+                {
+                    question: "¿Dónde está el NMEX GTC?",
+                    options: [
+                        "Estados Unidos",
+                        "Brasil",
+                        "México",
+                        "Argentina"
+                    ],
+                    correct: 2,
+                    rationale: "NMEX (Nissan México) tiene su Global Training Center en México, ubicado en América del Norte."
+                },
+                {
+                    question: "¿Dónde está el NMUK GTC?",
+                    options: [
+                        "Francia",
+                        "Alemania",
+                        "Reino Unido",
+                        "Italia"
+                    ],
+                    correct: 2,
+                    rationale: "NMUK (Nissan Motor UK) tiene su Global Training Center en Sunderland, Reino Unido."
+                },
+                {
+                    question: "¿Cuál es el centro principal por origen?",
+                    options: [
+                        "NMEX",
+                        "NMUK",
+                        "JPN",
+                        "Ninguno en particular"
+                    ],
+                    correct: 2,
+                    rationale: "JPN GTC (Nissan Japón) es el centro principal y de origen de toda la estructura de GTCs globales."
+                }
+            ]
+        };
+
+        // Quiz State
+        let quizState = {
+            currentQuestion: 0,
+            score: 0,
+            answers: [],
+            answered: false
+        };
+
+        // Initialize Quiz
+        function initQuiz() {
+            loadQuestion();
+        }
+
+        // Load Current Question
+        function loadQuestion() {
+            const q = quizData.questions[quizState.currentQuestion];
+            document.getElementById('questionText').textContent = q.question;
+            document.getElementById('questionCounter').textContent = `Pregunta ${quizState.currentQuestion + 1} de ${quizData.questions.length}`;
+            
+            // Update progress bar
+            const progress = ((quizState.currentQuestion + 1) / quizData.questions.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+
+            // Load options
+            for (let i = 0; i < 4; i++) {
+                const optionBtn = document.querySelector(`[data-index="${i}"]`);
+                const optionText = document.getElementById(`option${i}`);
+                optionText.textContent = q.options[i];
+                optionBtn.className = 'slide-11-option';
+                optionBtn.disabled = false;
+            }
+
+            // Hide feedback
+            document.getElementById('feedbackSection').style.display = 'none';
+            quizState.answered = false;
+        }
+
+        // Select Answer
+        function selectAnswer(index) {
+            if (quizState.answered) return;
+
+            quizState.answered = true;
+            const q = quizData.questions[quizState.currentQuestion];
+            const isCorrect = index === q.correct;
+
+            // Store answer
+            quizState.answers.push({
+                question: q.question,
+                selected: index,
+                correct: q.correct,
+                isCorrect: isCorrect
+            });
+
+            // Update score
+            if (isCorrect) {
+                quizState.score++;
+            }
+
+            // Disable all options
+            document.querySelectorAll('.slide-11-option').forEach(btn => btn.disabled = true);
+
+            // Highlight selected and correct answers
+            const buttons = document.querySelectorAll('.slide-11-option');
+            buttons[index].classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            if (!isCorrect) {
+                buttons[q.correct].classList.add('correct');
+            }
+
+            // Show feedback
+            const feedbackSection = document.getElementById('feedbackSection');
+            const feedbackMsg = document.getElementById('feedbackMessage');
+            feedbackSection.className = isCorrect ? 'slide-11-feedback correct' : 'slide-11-feedback incorrect';
+            
+            const feedbackText = `<strong>${isCorrect ? '✓ Correcto' : '✗ Incorrecto'}</strong><br>${q.rationale}`;
+            feedbackMsg.innerHTML = feedbackText;
+            feedbackSection.style.display = 'block';
+
+            // Update button text
+            const nextBtn = document.getElementById('nextQuestionBtn');
+            const isLastQuestion = quizState.currentQuestion === quizData.questions.length - 1;
+            nextBtn.textContent = isLastQuestion ? 'Ver Resultados →' : 'Siguiente Pregunta →';
+        }
+
+        // Next Question
+        function nextQuestion() {
+            if (quizState.currentQuestion < quizData.questions.length - 1) {
+                quizState.currentQuestion++;
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Show Results
+        function showResults() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.getElementById('resultsContainer').style.display = 'flex';
+
+            const totalQuestions = quizData.questions.length;
+            const percentage = Math.round((quizState.score / totalQuestions) * 100);
+            
+            document.getElementById('finalScore').textContent = `${quizState.score}/${totalQuestions}`;
+
+            // Determine message based on score
+            let message = '';
+            if (percentage === 100) {
+                message = '¡Excelente! Dominas el tema perfectamente.';
+            } else if (percentage >= 75) {
+                message = '¡Muy bien! Tienes un buen dominio del tema.';
+            } else if (percentage >= 50) {
+                message = 'Buen intento. Considera revisar los temas.';
+            } else {
+                message = 'Te recomendamos revisar los slides anteriores.';
+            }
+
+            document.getElementById('resultsMessage').textContent = message;
+
+            // Show answer details
+            const detailsContainer = document.getElementById('resultsDetails');
+            detailsContainer.innerHTML = '';
+            
+            quizState.answers.forEach((answer, idx) => {
+                const detail = document.createElement('div');
+                detail.className = `slide-11-result-item ${answer.isCorrect ? 'correct' : 'incorrect'}`;
+                detail.innerHTML = `<strong>Pregunta ${idx + 1}:</strong> ${answer.isCorrect ? '✓ Correcta' : '✗ Incorrecta'}`;
+                detailsContainer.appendChild(detail);
+            });
+        }
+
+        // Restart Quiz
+        function restartQuiz() {
+            quizState = {
+                currentQuestion: 0,
+                score: 0,
+                answers: [],
+                answered: false
+            };
+
+            document.getElementById('quizContainer').style.display = 'block';
+            document.getElementById('resultsContainer').style.display = 'none';
+            
+            loadQuestion();
+        }
     </script>
 </html>
